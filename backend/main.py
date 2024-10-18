@@ -8,10 +8,6 @@ import numpy as np
 import json
 import os
 import re
-import logging
-
-# ====== Configure Logging ======
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 app = FastAPI()
 
@@ -30,7 +26,6 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 programs_file = 'programs_with_embeddings.json'
 if not os.path.exists(programs_file):
     if not os.path.exists('programs.json'):
-        logging.error("The 'programs.json' file does not exist.")
         raise FileNotFoundError("The 'programs.json' file is missing.")
     
     with open('programs.json', 'r') as file:
@@ -67,12 +62,10 @@ def handle_basic_conversation(query):
         r"\bthank you\b": "You're welcome! Feel free to ask more.",
         r"\bhelp\b": "Sure! I can assist with program information and eligibility.",
         r"\bwho created you\b": "I was created to assist clients with information about ISANS programs.",
-        # Add more patterns as needed
     }
 
     for pattern, reply in basic_replies.items():
         if re.search(pattern, query):
-            logging.info(f"Matched basic conversation pattern: '{pattern}' with reply: '{reply}'")
             return reply
 
     return None
@@ -107,7 +100,6 @@ def get_relevant_programs(query, top_k=5):
 
 # ====== Generate Chatbot Response ======
 def generate_response(query):
-    # First, handle basic conversation (optional if you want to skip greetings)
     basic_reply = handle_basic_conversation(query)
     if basic_reply:
         return basic_reply
@@ -132,7 +124,6 @@ async def chat(request: Request):
     user_query = data.get('query', '').strip()
 
     if not user_query:
-        logging.warning("Empty query received.")
         return JSONResponse(content={"response": "Please enter a valid query."})
 
     try:
