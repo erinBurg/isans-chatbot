@@ -72,42 +72,44 @@ def handle_basic_conversation(query):
 
 # ====== Knowledge-Based Replies (Program Lookup with Enhanced Matching) ======
 def get_relevant_programs(query, top_k=5):
-    # Split the query into individual words and convert to lowercase
     query_words = query.lower().split()
     relevant_programs = []
     seen_programs = set()
 
-    # Stage 1: Strict Eligibility Criteria Matching
+    # Stage 1: Match on specific fields (immigrationStatuses, ageGroups, languageLevels)
     for program in programs:
         immigration_statuses = [status.lower() for status in program['eligibilityCriteria'].get('immigrationStatuses', [])]
         language_levels = [level.lower() for level in program['eligibilityCriteria'].get('languageLevels', [])]
         age_groups = [age.lower() for age in program['eligibilityCriteria'].get('ageGroups', [])]
 
-        # Check if any query word matches the eligibility criteria (age, language, or immigration status)
-        if any(word in immigration_statuses for word in query_words) or \
-           any(word in language_levels for word in query_words) or \
-           any(word in age_groups for word in query_words):
-            if program['id'] not in seen_programs:  # Prevent duplicates
+        # Corrected Matching Logic
+        if any(word in status for status in immigration_statuses for word in query_words):
+            if program['id'] not in seen_programs:
                 relevant_programs.append(program)
                 seen_programs.add(program['id'])
 
-    # If relevant programs were found based on strict eligibility criteria, return them and stop further searching
+        elif any(word in language_levels for word in query_words) or \
+             any(word in age_groups for word in query_words):
+            if program['id'] not in seen_programs:
+                relevant_programs.append(program)
+                seen_programs.add(program['id'])
+
+    # If relevant programs were found based on eligibility, return them
     if relevant_programs:
         return relevant_programs
 
-    # Stage 2: General Search in Program Name and Description
+    # Stage 2: Fallback to general search in program name and description
     for program in programs:
         program_name = program['name'].lower()
         program_description = program['description'].lower()
 
-        # Check if any query word matches the program name or description
         if any(word in program_name for word in query_words) or \
            any(word in program_description for word in query_words):
             if program['id'] not in seen_programs:
                 relevant_programs.append(program)
                 seen_programs.add(program['id'])
 
-    # Stage 3: Embedding-Based Similarity Search (only if no strict matches found)
+    # Stage 3: Embedding-Based Similarity Search (if no results from eligibility or fallback search)
     if not relevant_programs:
         search_k = min(top_k, len(programs))
         query_embedding = model.encode(query).reshape(1, -1).astype('float32')
