@@ -1,0 +1,23 @@
+[
+    {
+      "id": "program_1",
+      "name": "Employment Interventions",
+      "description": "Support for job placement and wage subsidies.",
+      "eligibilityCriteria": {
+        "immigrationStatuses": ["Permanent Resident - Refugee", "Protected Person"],
+        "languageLevels": ["CLB 1-8"],
+        "ageGroups": ["Adult"]
+      }
+    },
+    {
+      "id": "program_2",
+      "name": "Federal Internship for Newcomers",
+      "description": "Professional internships and mentoring.",
+      "eligibilityCriteria": {
+        "immigrationStatuses": ["Permanent Resident"],
+        "languageLevels": ["CLB 5-12"],
+        "ageGroups": ["Youth", "Adult"]
+      }
+    }
+  ]
+  
