@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Explore Our Programs and Services</h1>
+        <p>Find the right programs for you based on your unique needs and eligibility criteria. Use the filter to narrow down your search by specific attributes like age, visa eligibility, literacy, and more.</p>
+    </header>
+
+    <div class="content">
+        <div class="filter-box">
+            <div class="header">
+                <h2>How to use the program filter</h2>
+                <p>Using the filter drop-downs, you can select from a number of options to show you the program that fits your unique background and settlement journey.</p>
+            </div>
+            <form id="programFilterForm">
+                <div class="search-bar">
+                    <input type="text" id="search" placeholder="Search..." />
+                </div>
+                <!-- Filter Form Groups -->
+                <div class="form-group">
+                    <label for="programPathways">Program Pathways</label>
+                    <select id="programPathways">
+                        <option value="all">All Program Pathways</option>
+                        <option value="pathway1">Pathway 1</option>
+                        <option value="pathway2">Pathway 2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">Ages</label>
+                    <select id="age">
+                        <option value="all">All Ages</option>
+                        <option value="15-25">15-25</option>
+                        <option value="26-40">26-40</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="literacy">Literacy Requirements</label>
+                    <select id="literacy">
+                        <option value="all">All Literacy Requirements</option>
+                        <option value="basic">Basic English</option>
+                        <option value="intermediate">Intermediate English</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="visaEligibility">Visa Eligibilities</label>
+                    <select id="visaEligibility">
+                        <option value="all">All Visa Eligibilities</option>
+                        <option value="permanentResident">Permanent Resident</option>
+                        <option value="workPermit">Work Permit</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryMethod">Delivery Methods</label>
+                    <select id="deliveryMethod">
+                        <option value="all">All Delivery Methods</option>
+                        <option value="online">Online</option>
+                        <option value="inPerson">In-person</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Genders</label>
+                    <select id="gender">
+                        <option value="all">All Genders</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <button type="submit" id="submitBtn">Submit</button>
+                <button type="reset" id="resetBtn">Reset</button>
+            </form>
+        </div>
+
+        <div class="message-box">
+            <div id="message-container">
+                <div class="message bot-message">Bot: Welcome to the ISANS Chatbot! How can I assist you today?</div>
+            </div>
+            <input type="text" id="user-input" placeholder="Type your message here..." onkeydown="handleKeyPress(event)">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
