@@ -1,0 +1,77 @@
+2024-10-18 12:24:19,416 - INFO - Device set to cuda
+2024-10-18 12:24:20,440 - INFO - Programs embedding file not found, generating embeddings.
+2024-10-18 12:24:38,534 - INFO - Device set to cuda
+2024-10-18 12:24:39,447 - INFO - Programs embedding file not found, generating embeddings.
+2024-10-18 12:24:39,710 - INFO - Embedding generated for program 'Employment Interventions' in 0.26197314262390137 seconds
+2024-10-18 12:24:39,719 - INFO - Embedding generated for program 'Federal Internship for Newcomers' in 0.009124755859375 seconds
+2024-10-18 12:24:57,228 - INFO - Device set to cuda
+2024-10-18 12:24:58,099 - INFO - Loaded program embeddings from file.
+2024-10-18 12:24:58,099 - INFO - FAISS index created and embeddings added.
+2024-10-18 12:24:58,241 - INFO - Received basic query: hi
+2024-10-18 12:24:58,241 - INFO - Matched basic reply for query 'hi': Hello! How can I help you today?
+2024-10-18 12:25:04,094 - INFO - Received basic query: nice
+2024-10-18 12:25:04,094 - INFO - No basic reply matched for query: nice
+2024-10-18 12:25:04,094 - INFO - No relevant programs found by name or description. Proceeding with embedding search.
+2024-10-18 12:28:13,802 - INFO - Device set to cuda
+2024-10-18 12:28:14,747 - INFO - Loaded program embeddings from file.
+2024-10-18 12:28:14,748 - INFO - FAISS index created and embeddings added.
+2024-10-18 12:28:14,750 - INFO - Received basic query: nice
+2024-10-18 12:28:14,751 - INFO - No basic reply matched for query: nice
+2024-10-18 12:28:14,751 - INFO - No relevant programs found by name or description. Proceeding with embedding search.
+2024-10-18 12:29:09,953 - INFO - Device set to cuda
+2024-10-18 12:29:10,818 - INFO - Programs embedding file not found, generating embeddings.
+2024-10-18 12:32:10,074 - INFO - Device set to cuda
+2024-10-18 12:32:11,020 - INFO - Loaded program embeddings from file.
+2024-10-18 12:32:11,020 - INFO - FAISS index created and embeddings added.
+2024-10-18 12:32:11,020 - INFO - Received basic query: hi
+2024-10-18 12:32:11,020 - INFO - Matched basic reply for query 'hi': Hello! How can I help you today?
+2024-10-18 12:32:11,020 - INFO - Received basic query: hi
+2024-10-18 12:32:11,020 - INFO - Matched basic reply for query 'hi': Hello! How can I help you today?
+2024-10-18 12:32:13,602 - INFO - Device set to cuda
+2024-10-18 12:32:14,470 - INFO - Loaded program embeddings from file.
+2024-10-18 12:32:14,470 - INFO - FAISS index created and embeddings added.
+2024-10-18 12:32:25,171 - INFO - Received basic query: hi
+2024-10-18 12:32:25,171 - INFO - Matched basic reply for query 'hi': Hello! How can I help you today?
+2024-10-18 12:32:27,208 - INFO - Received basic query: hello
+2024-10-18 12:32:27,208 - INFO - Matched basic reply for query 'hello': Hi there! How can I assist you?
+2024-10-18 12:32:35,125 - INFO - Received basic query: So
+2024-10-18 12:32:35,125 - INFO - No basic reply matched for query: so
+2024-10-18 12:32:35,125 - INFO - Relevant programs found using eligibility criteria in 0.0 seconds.
+2024-10-18 12:32:35,125 - INFO - Programs retrieved for query: So
+2024-10-18 12:32:38,314 - INFO - Received basic query: what
+2024-10-18 12:32:38,314 - INFO - No basic reply matched for query: what
+2024-10-18 12:32:38,314 - INFO - No relevant programs found by name or description. Proceeding with embedding search.
+2024-10-18 12:32:43,018 - INFO - Device set to cuda
+2024-10-18 12:32:43,898 - INFO - Loaded program embeddings from file.
+2024-10-18 12:32:43,898 - INFO - FAISS index created and embeddings added.
+2024-10-18 12:32:43,898 - INFO - Received basic query: what
+2024-10-18 12:32:43,898 - INFO - No basic reply matched for query: what
+2024-10-18 12:32:43,898 - INFO - No relevant programs found by name or description. Proceeding with embedding search.
+2024-10-18 12:35:38,413 - INFO - Device set to cuda
+2024-10-18 12:35:39,329 - INFO - Loaded program embeddings from file.
+2024-10-18 12:35:39,329 - INFO - FAISS index created and embeddings added.
+2024-10-18 12:38:09,869 - INFO - Device set to cuda
+2024-10-18 12:38:10,958 - INFO - Loaded program embeddings from file.
+2024-10-18 12:38:10,958 - INFO - FAISS index created and embeddings added.
+2024-10-18 12:38:12,668 - INFO - Received basic query: hi
+2024-10-18 12:38:12,668 - INFO - Matched basic reply for query 'hi': Hello! How can I help you today?
+2024-10-18 12:38:17,248 - INFO - Received basic query: youth
+2024-10-18 12:38:17,248 - INFO - No basic reply matched for query: youth
+2024-10-18 12:38:17,248 - INFO - Relevant programs found using eligibility criteria in 0.0 seconds.
+2024-10-18 12:38:17,248 - INFO - Programs retrieved for query: youth
+2024-10-18 12:38:25,718 - INFO - Received basic query: protected
+2024-10-18 12:38:25,718 - INFO - No basic reply matched for query: protected
+2024-10-18 12:38:25,718 - INFO - Relevant programs found using eligibility criteria in 0.0 seconds.
+2024-10-18 12:38:25,718 - INFO - Programs retrieved for query: protected
+2024-10-18 12:38:29,055 - INFO - Received basic query: adult
+2024-10-18 12:38:29,055 - INFO - No basic reply matched for query: adult
+2024-10-18 12:38:29,055 - INFO - Relevant programs found using eligibility criteria in 0.0 seconds.
+2024-10-18 12:38:29,055 - INFO - Programs retrieved for query: adult
+2024-10-18 12:38:31,576 - INFO - Received basic query: i am youth
+2024-10-18 12:38:31,577 - INFO - No basic reply matched for query: i am youth
+2024-10-18 12:38:31,577 - INFO - Relevant programs found using eligibility criteria in 0.0 seconds.
+2024-10-18 12:38:31,577 - INFO - Programs retrieved for query: i am youth
+2024-10-18 12:38:37,016 - INFO - Received basic query: i am protected person
+2024-10-18 12:38:37,018 - INFO - No basic reply matched for query: i am protected person
+2024-10-18 12:38:37,018 - INFO - Relevant programs found using eligibility criteria in 0.0 seconds.
+2024-10-18 12:38:37,018 - INFO - Programs retrieved for query: i am protected person

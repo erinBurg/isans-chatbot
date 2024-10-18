@@ -15,7 +15,7 @@ for program in programs:
     program['embedding'] = embedding.tolist()
 
 # Save programs with embeddings
-with open('programs_with_embeddings.json', 'w') as file:
+with open('backend/programs_with_embeddings.json', 'w') as file:
     json.dump(programs, file, indent=2)
 
 print("Embeddings generated and saved to programs_with_embeddings.json")
